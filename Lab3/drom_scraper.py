@@ -24,4 +24,8 @@ def GetWebPageByLink(url: str, folder_name = datetime.now().strftime("%Y-%m-%d -
                         fh.write(base64.decodebytes(base64.b64encode(img.content)))
                 zpf.write(f"./{folder_name}/{rng_name}.png")
 
-GetWebPageByLink("https://auto.drom.ru/toyota/all/?maxprice=350000")
+def main():
+    GetWebPageByLink("https://auto.drom.ru/toyota/all/?maxprice=350000")
+
+if __name__ == "__main__":
+    main()
